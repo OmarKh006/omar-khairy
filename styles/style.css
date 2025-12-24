@@ -484,3 +484,34 @@ body {
 }
 
 /* End Reviews */
+
+/* Contact */
+
+.contact {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20rem;
+  align-items: center;
+}
+
+.contact__description {
+  font-size: var(--font-size-20);
+}
+
+.contact__email {
+  font-weight: var(--font-weight-bold);
+  margin: 2.5rem 0;
+}
+
+.contact__social {
+  transition: var(--transition-timing);
+}
+
+.contact__social:hover {
+  transform: scale(1.2);
+}
+
+.linked:hover {
+  filter: invert(32%) sepia(97%) saturate(745%) hue-rotate(190deg);
+}
+
+/* End Contact */
