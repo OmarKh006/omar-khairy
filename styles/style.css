@@ -91,6 +91,16 @@ body {
   padding-inline: var(--gutter);
 }
 
+.video-loop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.08;
+  z-index: -1;
+}
+
 .section {
   position: relative;
   display: grid;
@@ -321,3 +331,11 @@ body {
 }
 
 /* End Skills */
+
+/* Media */
+
+/* .media__video {
+  width: 100%;
+} */
+
+/* End Media */
