@@ -1,6 +1,6 @@
 :root {
-  --container-width: 80rem; /*119 too wide for my screen*/
-  --gutter: 0.1rem;
+  --container-width: 119rem;
+  --gutter: 2rem;
 
   --color-black: #000;
   --color-white: #fff;
@@ -67,6 +67,13 @@ ul,
 ol {
   list-style: none;
 }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 11rem;
+}
+
 /*End CSS Reset*/
 
 body {
@@ -247,13 +254,14 @@ body {
   position: absolute;
   background-color: var(--color-grey);
   width: 100%;
-  height: 100%;
+  height: 46rem;
   z-index: -1;
   border-radius: 1.8rem;
+  box-shadow: 2.17543px 8.7017px 38.0699px rgba(0, 0, 0, 0.15);
 }
 
 .bio__pic {
-  width: 36.7rem;
+  width: 42.7rem;
 }
 
 /* End Bio */
