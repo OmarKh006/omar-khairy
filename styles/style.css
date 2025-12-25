@@ -160,6 +160,10 @@ body,
   z-index: -1;
 }
 
+.navigation {
+  transition: var(--transition-timing);
+}
+
 .navigation__list {
   display: flex;
   gap: 2rem;
@@ -185,6 +189,10 @@ body,
   color: var(--color-blue);
   font-weight: var(--font-weight-bold);
   text-decoration: underline;
+}
+
+.burger-menu__checkbox {
+  display: none;
 }
 
 /* End Header */
@@ -659,7 +667,123 @@ html:has(.toggle__checkbox:checked) .github {
 }
 
 html:has(.toggle__checkbox:checked) .github:hover {
-  fill: rgb(169, 163, 163);
+  fill: rgb(74, 72, 72);
 }
 
 /* End Dark Theme */
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    row-gap: 8rem;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .bio__pic-content {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
+
+  .skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects__main {
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    justify-items: center;
+  }
+
+  .projects__data:nth-of-type(2) {
+    order: 1;
+  }
+
+  .clients__opinions {
+    font-size: var(--font-size-24);
+  }
+
+  .contact {
+    row-gap: 6rem;
+  }
+
+  .contact__formContent {
+    order: -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 0;
+  }
+
+  .header::before {
+    z-index: 0;
+  }
+
+  .toggle {
+    padding: 3rem 0;
+    z-index: 1;
+  }
+
+  .bio__pic {
+    width: 100%;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.75rem;
+    z-index: 1;
+    align-self: center;
+  }
+
+  .burger-menu__bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: var(--color-text);
+    transition: var(--transition-timing);
+  }
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1) {
+    transform: translateY(10px) rotate(40deg);
+  }
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
+    opacity: o;
+    visibility: hidden;
+  }
+
+  .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-40deg);
+  }
+
+  .navigation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    top: 0;
+    padding: 3rem 0;
+    border-bottom: 0.1rem solid var(--color-text);
+    background-color: var(--color-background);
+    z-index: -1;
+  }
+
+  .burger-menu__checkbox:checked + .navigation {
+    top: 100%;
+  }
+}
+
+/* End Responsive */
