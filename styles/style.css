@@ -14,7 +14,7 @@
   --color-dark-green: #42959b;
   --color-background: var(--color-white);
   --color-text: var(--color-black);
-  --color-box-img: var(--color-black);
+  --color-box-img: var(--color-grey);
   --color-link-bg: var(--color-black);
   --color-input-border: var(--color-black);
 
@@ -154,7 +154,7 @@ body,
   position: absolute;
   height: 100%;
   width: 100vw;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   border-bottom: 0.1rem solid var(--color-input-border);
   top: 0;
   z-index: -1;
@@ -320,7 +320,7 @@ body,
 .bio__pic-content::before {
   content: "";
   position: absolute;
-  background-color: var(--color-grey);
+  background-color: var(--color-box-img);
   width: 100%;
   height: 46rem;
   z-index: -1;
@@ -531,12 +531,35 @@ body,
   transition: var(--transition-timing);
 }
 
+.contact__socials {
+  display: flex;
+  gap: 1rem;
+}
+
 .contact__social:hover {
   transform: scale(1.2);
 }
 
+svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.linked {
+  transition: var(--transition-timing);
+}
+
+.github {
+  transition: var(--transition-timing);
+  fill: rgb(74, 72, 72);
+}
+
 .linked:hover {
-  filter: invert(32%) sepia(97%) saturate(745%) hue-rotate(190deg);
+  fill: #0a66c2;
+}
+
+.github:hover {
+  fill: var(--color-black);
 }
 
 .contact__inputs {
@@ -611,3 +634,32 @@ body,
 }
 
 /* End Footer */
+
+/* Dark Theme */
+
+html:has(.toggle__checkbox:checked) {
+  --color-background: var(--color-black);
+  --color-text: var(--color-white);
+  --color-box-img: var(--color-green);
+  --color-link-bg: var(--color-green);
+  --color-grey: #080808;
+  --color-input-border: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .linked {
+  fill: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .linked:hover {
+  fill: #0a66c2;
+}
+
+html:has(.toggle__checkbox:checked) .github {
+  fill: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .github:hover {
+  fill: rgb(169, 163, 163);
+}
+
+/* End Dark Theme */
