@@ -493,6 +493,7 @@ body,
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20rem;
   align-items: center;
+  font-family: var(--font-family-poppins);
 }
 
 .contact__description {
@@ -577,3 +578,14 @@ body,
 }
 
 /* End Contact */
+
+/*Footer */
+
+.footer {
+  padding: 1rem 0;
+  font-size: var(--font-size-15);
+  border-top: 0.1rem solid var(--color-black);
+  font-family: var(--font-family-poppins);
+}
+
+/* End Footer */
