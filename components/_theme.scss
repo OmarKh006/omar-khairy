@@ -1,0 +1,24 @@
+html:has(.toggle__checkbox:checked) {
+  --color-background: var(--color-black);
+  --color-text: var(--color-white);
+  --color-box-img: var(--color-green);
+  --color-link-bg: var(--color-green);
+  --color-grey: #080808;
+  --color-input-border: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .linked {
+  fill: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .linked:hover {
+  fill: #0a66c2;
+}
+
+html:has(.toggle__checkbox:checked) .github {
+  fill: var(--color-white);
+}
+
+html:has(.toggle__checkbox:checked) .github:hover {
+  fill: rgb(74, 72, 72);
+}
