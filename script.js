@@ -72,6 +72,14 @@ function checkInputs() {
   }
 }
 
+function underConstruction() {
+  Swal.fire({
+    icon: "info",
+    title: "Under Construction",
+    text: "still working on my CV",
+  });
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkInputs();

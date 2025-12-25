@@ -71,7 +71,7 @@ ol {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 11rem;
+  scroll-padding-top: 12rem;
 }
 
 /*End CSS Reset*/
@@ -142,9 +142,11 @@ body,
 
 .header {
   padding: 3rem 0;
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .header::before {
@@ -173,6 +175,16 @@ body,
 .navigation__link:active {
   text-decoration: underline;
   color: var(--color-text);
+}
+
+.container:has(#bio:target) .navigation__bio,
+.container:has(#skills:target) .navigation__skills,
+.container:has(#projects:target) .navigation__projects,
+.container:has(#clients:target) .navigation__clients,
+.container:has(#contact:target) .navigation__contact {
+  color: var(--color-blue);
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
 }
 
 /* End Header */
@@ -261,11 +273,21 @@ body,
   background-color: var(--color-link-bg);
   color: var(--color-white);
   padding: 0.7rem 4.7rem;
+  transition: var(--transition-timing);
+}
+
+.say-hi-link:hover {
+  opacity: 0.7;
 }
 
 .find-out-link {
   padding: 0.7rem 0;
   margin-inline-start: 1.4rem;
+  transition: var(--transition-timing);
+}
+
+.find-out-link:hover {
+  transform: scale(1.1);
 }
 
 @keyframes jumping {
