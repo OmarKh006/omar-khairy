@@ -59,7 +59,7 @@ a {
 
 button {
   background-color: transparent;
-  border: none;
+  border: 0;
   cursor: pointer;
 }
 
@@ -76,12 +76,14 @@ html {
 
 /*End CSS Reset*/
 
-body {
+body,
+[type="submit"] {
   font-size: 1.6rem;
   font-family: var(--font-family-raleway);
   background-color: var(--color-background);
   color: var(--color-text);
   overflow-x: hidden;
+  border: 0;
 }
 
 .container {
@@ -512,6 +514,61 @@ body {
 
 .linked:hover {
   filter: invert(32%) sepia(97%) saturate(745%) hue-rotate(190deg);
+}
+
+.contact__inputs {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact__input {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  flex: 1;
+}
+
+.contact__textarea {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.contact__button {
+  background-color: var(--color-link-bg);
+  color: var(--color-white);
+  padding: 1.7rem 1.8rem;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-24);
+  margin-top: 3.4rem;
+}
+
+/* form:invalid::after {
+  content: "*";
+  font-size: var(--font-size-38);
+  color: var(--color-red);
+} */
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.input-div.error {
+  border: 0.11rem solid var(--color-red);
+}
+
+.error-text {
+  color: var(--color-red);
+  display: none;
+}
+
+.input-div.error .error-text {
+  display: block;
 }
 
 /* End Contact */

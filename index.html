@@ -10,6 +10,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "TuaOZWveN_YvTEap6",
+        });
+      })();
+    </script>
     <title>Omar Khairy</title>
   </head>
   <body>
@@ -221,8 +233,53 @@
           </div>
         </div>
 
-        <div></div>
+        <div class="contact__formContent">
+          <h2 class="h2-heading">
+            Let's Work <br />
+            Together!
+          </h2>
+
+          <form>
+            <div class="contact__inputs">
+              <div class="input-div">
+                <input
+                  class="contact__input"
+                  type="text"
+                  placeholder="Full Name"
+                  name="fullName"
+                  id="name"
+                />
+                <p class="error-text">Full name cannot be empty</p>
+              </div>
+              <div class="input-div">
+                <input
+                  class="contact__input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@gmail.com"
+                  pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
+                />
+                <p class="error-text email">Email cannot be empty</p>
+              </div>
+            </div>
+            <div class="input-div">
+              <textarea
+                class="contact__input contact__textarea"
+                id="message"
+                rows="1"
+                placeholder="Your Message"
+                name="description"
+              ></textarea>
+              <p class="error-text">Message cannot be empty</p>
+            </div>
+            <input class="contact__button" type="submit" value="Send Message" />
+          </form>
+        </div>
       </section>
+
+      <footer>test</footer>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
