@@ -85,7 +85,7 @@
   }
 
   .header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2) {
-    opacity: o;
+    opacity: 0;
     visibility: hidden;
   }
 
