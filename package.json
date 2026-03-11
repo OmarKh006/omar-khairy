@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A responsive personal portfolio website built to apply and showcase the skills I learned during my frontend development course.  \r The project focuses on clean layout structure, responsiveness, and real-world features such as a working contact form and theme switching.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmarKh006/omar-khairy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OmarKh006/omar-khairy/issues"
+  },
+  "homepage": "https://github.com/OmarKh006/omar-khairy#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0"
+  }
+}

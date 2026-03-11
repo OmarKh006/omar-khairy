@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const form = document.querySelector("form");
 const email = document.getElementById("email");
 const fname = document.getElementById("name");
@@ -25,7 +27,7 @@ function sendMail() {
         title: "Oops...",
         text: "Something went wrong!",
       });
-    }
+    },
   );
 }
 
