@@ -16,10 +16,24 @@
 }
 
 .skills__item {
+  position: relative;
+  display: inline-block;
   transition: var(--transition-timing);
   user-select: none;
 }
 
 .skills__item:hover {
   text-shadow: 0 0 2px var(--color-green);
+}
+
+.skills {
+  .underline::after {
+    content: "";
+    height: 0.6rem;
+    width: 60%;
+    background: var(--color-text);
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+  }
 }
