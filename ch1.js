@@ -9,7 +9,12 @@ const typescript = `
                 <span class="skills__years">2 years</span>
             </li>
 `;
+const downloadBtn = document.querySelector("#downloadBtn");
+const personalImg = document.querySelector(".bio__pic");
 
 editedRedux.innerText = "Node.js";
 editedReactTestingLibrary.innerText = "MongoDB";
 js.insertAdjacentHTML("afterend", typescript);
+downloadBtn.remove();
+personalImg.style.width = "36rem";
+// document.querySelector(".bio__pic").style.width = "36rem";
