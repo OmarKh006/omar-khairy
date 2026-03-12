@@ -19,17 +19,14 @@ downloadBtn.remove();
 personalImg.style.width = "36rem";
 // document.querySelector(".bio__pic").style.width = "36rem";
 
-// Get the <ul> element
-const list = document.querySelector(".skills__list");
+const liNodeLists = document.querySelectorAll(".skills__list li");
 
-// Attach a single event listener to the list itself
-list.addEventListener("click", (e) => {
-  // On click, check that the element clicked on is a direct descendent of the list
-  const { target } = e;
-  if (target.parentNode === list) {
-    // If it is, then remove it from the list
-    target.remove();
-    // Do the same thing, using `removeChild() instead`
-    // list.removeChild(target);
-  }
+liNodeLists.forEach((item) => {
+  // removes the underline class from all <li> first, then add it to the clicked one
+  item.addEventListener("click", () => {
+    liNodeLists.forEach((li) => {
+      li.classList.remove("underline");
+    });
+    item.classList.add("underline");
+  });
 });
